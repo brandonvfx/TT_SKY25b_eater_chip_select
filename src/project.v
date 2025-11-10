@@ -17,12 +17,6 @@ module tt_um_6502_chip_select (
 );
 
   reg [7:0] data_out;
-  
-  always @ (posedge clk or negedge rst_n) begin
-    if (!rst_n) begin
-      data_out <= 8'b0;
-    end
-  end
 
   // All output pins must be assigned. If not used, assign to 0.
   assign uio_out = 0;
