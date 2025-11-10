@@ -51,6 +51,6 @@ module tt_um_6502_chip_select (
   assign uo_out = data_out;
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
+  wire _unused = &{ena, ui_in[6], ui_in[7], 1'b0};
 
 endmodule
